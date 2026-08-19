@@ -1,0 +1,4 @@
+:root{--bg:#f6f8fb;--fg:#0b1220;--accent:#0066cc}
+html,body{height:100%}body{margin:0;font-family:Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--fg);display:grid;place-items:center}
+main{max-width:720px;padding:32px;text-align:center}
+button{background:var(--accent);color:#fff;border:0;padding:10px 16px;border-radius:6px;cursor:pointer}
