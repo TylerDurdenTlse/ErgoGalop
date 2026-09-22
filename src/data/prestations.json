@@ -1,0 +1,72 @@
+[
+  {
+    "id": "saddle-fitting",
+    "titre": "Bilan Ergonomique de Selle (Saddle Fitting)",
+    "categorie": "Ergonomie Équine",
+    "duree_minutes": 120,
+    "prix_eure_ttc": 120.00,
+    "description": "Analyse complète de la morphologie du cheval et de la posture du cavalier pour adapter ou choisir une selle optimale.",
+    "etapes": [
+      "Examen palpatoire et relevé de ligne de dos du cheval",
+      "Analyse statique et dynamique de la selle actuelle",
+      "Essai dynamique aux trois allures",
+      "Prise de mesures et préconisations de modifications ou de matériel"
+    ],
+    "prerequis": [
+      "Cheval propre et détendu",
+      "Matériel habituel à disposition (selle, tapis, sangle)",
+      "Surface plate et aire de monte sécurisée"
+    ]
+  },
+  {
+    "id": "bridle-fitting",
+    "titre": "Bilan Ergonomique de Filet et Mords (Bridle Fitting)",
+    "categorie": "Ergonomie Équine",
+    "duree_minutes": 90,
+    "prix_eure_ttc": 90.00,
+    "description": "Évaluation des points de pression céphaliques du cheval pour ajuster la têtière, la muserolle et le mors selon son anatomie.",
+    "etapes": [
+      "Examen de l'anatomie de la tête du cheval (dents, barres, langue, zones nerveuses)",
+      "Analyse du bridon et du mors habituels",
+      "Essayage et réglages fins en statique",
+      "Vérification dynamique des réponses et du confort du cheval"
+    ],
+    "prerequis": [
+      "Visite dentiste équin récente recommandée",
+      "Matériel de briderie habituel"
+    ]
+  },
+  {
+    "id": "boot-fitting",
+    "titre": "Consultation Hipposandales & Protections (Boot Fitting)",
+    "categorie": "Ergonomie Équine",
+    "duree_minutes": 60,
+    "prix_eure_ttc": 70.00,
+    "description": "Prise de mesures précises des pieds du cheval pieds nus et essayage de modèles d'hipposandales adaptés.",
+    "etapes": [
+      "Prise de mesures des sabots après parage",
+      "Évaluation de la forme du pied et de la démarche",
+      "Essayage de kits de tailles de différentes marques",
+      "Test aux allures sur différents sols"
+    ],
+    "prerequis": [
+      "Pieds parés depuis moins de 8 jours"
+    ]
+  },
+  {
+    "id": "suivi-reajustement",
+    "titre": "Consultation de Suivi & Réajustement",
+    "categorie": "Suivi Client",
+    "duree_minutes": 60,
+    "prix_eure_ttc": 60.00,
+    "description": "Contrôle périodique de l'évolution morphologique du cheval et réajustement du matériel (matelassures, arcade, etc.).",
+    "etapes": [
+      "Relevé de la nouvelle ligne de dos",
+      "Vérification de l'adaptation du matériel ajusté précédemment",
+      "Réajustement immédiat si nécessaire (ex: modification d'arcade, feutres)"
+    ],
+    "prerequis": [
+      "Avoir déjà effectué un bilan initial Saddle Fitting dans les 12 derniers mois"
+    ]
+  }
+]

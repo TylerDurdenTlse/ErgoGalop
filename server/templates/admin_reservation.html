@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <style>
+    body { font-family: Arial, sans-serif; color: #0f172a; }
+    .card { background: #ffffff; border-radius: 8px; padding: 20px; border: 1px solid #e6e9ef; }
+    h2 { color: #1a365d; }
+    .meta { font-size: 14px; color: #475569; }
+    .field { margin: 8px 0; }
+    .footer { font-size: 12px; color: #94a3b8; margin-top: 18px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Nouvelle réservation reçue</h2>
+    <p class="meta">ID: {{id}} — Créée le {{created_at}}</p>
+
+    <div class="field"><strong>Client :</strong> {{nom}} {{prenom}}</div>
+    <div class="field"><strong>Email :</strong> {{email}}</div>
+    <div class="field"><strong>Téléphone :</strong> {{telephone}}</div>
+    <div class="field"><strong>Cheval :</strong> {{cheval_nom}}</div>
+    <div class="field"><strong>Prestation :</strong> {{prestation_souhaitee}}</div>
+    <div class="field"><strong>Rendez-vous :</strong> {{date}} — {{time_range}}</div>
+
+    <h3>Détails</h3>
+    <div class="field">{{notes_html}}</div>
+
+    <div class="footer">Consultez le fichier de stockage des réservations pour gérer ou confirmer ce rendez-vous.</div>
+  </div>
+</body>
+</html>

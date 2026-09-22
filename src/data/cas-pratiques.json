@@ -1,0 +1,18 @@
+{
+	"items": [
+		{
+			"id": "cas-001",
+			"titre": "Correction d'une selle mal adaptée",
+			"extrait": "Étude de cas : selle trop étroite provoquant des réactions de déplacement et perte de poil au garrot.",
+			"description": "Intervention comprenant examen statique et dynamique, ajustement temporaire et préconisations pour une selle de remplacement.",
+			"url": "#/cas-001"
+		},
+		{
+			"id": "cas-002",
+			"titre": "Réglage de mors pour cheval réactif",
+			"extrait": "Analyse des points de pression et adaptation du mors pour une meilleure décontraction.",
+			"description": "Examen buccal et tests de mors, suivi de recommandations adaptées à la morphologie.",
+			"url": "#/cas-002"
+		}
+	]
+}

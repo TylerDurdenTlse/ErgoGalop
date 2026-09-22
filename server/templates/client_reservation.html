@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <style>
+    body { font-family: Arial, sans-serif; color: #0f172a; }
+    .card { background: #ffffff; border-radius: 8px; padding: 20px; border: 1px solid #e6e9ef; }
+    h2 { color: #1a365d; }
+    .meta { font-size: 14px; color: #475569; }
+    .field { margin: 8px 0; }
+    .footer { font-size: 13px; color: #64748b; margin-top: 18px; }
+    .cta { display:inline-block; margin-top:12px; background:#c5a059; color:#121212; padding:10px 14px; border-radius:6px; text-decoration:none; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Confirmation de réservation</h2>
+    <p class="meta">Bonjour {{prenom}},</p>
+    <p>Nous avons bien reçu votre demande de réservation. Voici le récapitulatif :</p>
+    <div class="field"><strong>Prestation :</strong> {{prestation_souhaitee}}</div>
+    <div class="field"><strong>Date :</strong> {{date}}</div>
+    <div class="field"><strong>Créneau :</strong> {{time_range}}</div>
+    <div class="field"><strong>Cheval :</strong> {{cheval_nom}}</div>
+
+    <p class="footer">Nous vous recontacterons rapidement pour confirmer la venue et les modalités. Pour toute question, répondez à cet e-mail.</p>
+    <a class="cta" href="mailto:{{admin_email}}?subject=Confirmation%20reservation%20{{id}}">Contacter ErgoGalop</a>
+  </div>
+</body>
+</html>

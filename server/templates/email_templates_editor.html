@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Email templates editor</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body{font-family:Inter,Segoe UI,Arial,sans-serif;background:#f3f4f6;color:#0f172a;padding:18px}
+    .wrap{max-width:1100px;margin:0 auto}
+    textarea{width:100%;height:360px;font-family:monospace;font-size:13px;padding:10px;border:1px solid #e6e9ef;border-radius:8px;background:#fff}
+    .row{display:flex;gap:12px}
+    .col{flex:1}
+    .controls{display:flex;gap:8px;margin:10px 0}
+    button{padding:8px 12px;border-radius:8px;border:0;background:#0ea5a4;color:white}
+    .note{color:#475569;font-size:13px;margin-bottom:8px}
+    .status{margin-top:8px;color:green}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Email templates editor</h1>
+    <p class="note">Edit the admin and client HTML templates stored in <strong>src/data</strong>. Use Preview to view rendered output.</p>
+
+    <div class="row">
+      <div class="col">
+        <h3>Admin template (email_admin_template.html)</h3>
+        <textarea id="adminTpl"></textarea>
+      </div>
+      <div class="col">
+        <h3>Client template (email_client_template.html)</h3>
+        <textarea id="clientTpl"></textarea>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="loadBtn">Load</button>
+      <button id="saveBtn">Save</button>
+      <button id="previewBtn">Preview</button>
+      <button id="downloadBtn">Download ZIP</button>
+    </div>
+    <div id="status" class="status"></div>
+  </div>
+
+  <script>
+    async function loadTemplates(){
+      const res = await fetch('/admin/email-templates/data');
+      if (!res.ok) { document.getElementById('status').textContent = 'Failed to load templates'; return; }
+      const j = await res.json();
+      document.getElementById('adminTpl').value = j.admin || '';
+      document.getElementById('clientTpl').value = j.client || '';
+      document.getElementById('status').textContent = 'Loaded templates';
+    }
+
+    async function saveTemplates(){
+      const admin = document.getElementById('adminTpl').value;
+      const client = document.getElementById('clientTpl').value;
+      const res = await fetch('/admin/email-templates', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({ admin, client }) });
+      const j = await res.json();
+      if (res.ok && j.ok) { document.getElementById('status').textContent = 'Saved templates to src/data'; }
+      else { document.getElementById('status').textContent = 'Save failed: ' + (j && j.error ? j.error : res.statusText); }
+    }
+
+    document.getElementById('loadBtn').addEventListener('click', e => { loadTemplates(); });
+    document.getElementById('saveBtn').addEventListener('click', e => { saveTemplates(); });
+    document.getElementById('previewBtn').addEventListener('click', e => { window.open('/admin/email-preview','_blank'); });
+
+    // Download both templates as a zip (simple fallback: download concatenated file)
+    document.getElementById('downloadBtn').addEventListener('click', async () => {
+      const admin = document.getElementById('adminTpl').value;
+      const client = document.getElementById('clientTpl').value;
+      const blob = new Blob(["--- admin template ---\n", admin, "\n\n--- client template ---\n", client], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = 'email_templates.txt'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+    });
+
+    // Auto-load on open
+    loadTemplates();
+  </script>
+</body>
+</html>

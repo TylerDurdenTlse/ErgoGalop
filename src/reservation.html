@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ErgoGalop — Réservation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="color-scheme" content="light dark">
+  <script src="https://apis.google.com/js/api.js"></script>
+  <style>
+    /* Lighter, more readable inputs for the reservation form */
+    #form-prediagnostic input,
+    #form-prediagnostic select,
+    #form-prediagnostic textarea {
+      background: #ffffff;
+      color: #1f2937;
+      border: 1px solid #d1d5db;
+      padding: 0.6rem;
+      border-radius: 0.5rem;
+      box-sizing: border-box;
+    }
+
+    #form-prediagnostic input::placeholder,
+    #form-prediagnostic textarea::placeholder {
+      color: #9ca3af;
+      opacity: 1;
+    }
+
+    #form-prediagnostic input:focus,
+    #form-prediagnostic textarea:focus,
+    #form-prediagnostic select:focus {
+      outline: none;
+      border-color: #2b6cb0;
+      box-shadow: 0 0 0 4px rgba(43,108,176,0.12);
+    }
+
+    /* Ensure labels and help text are legible */
+    #form-prediagnostic label { color: #0f172a; }
+    #form-prediagnostic .text-xs { color: #475569; }
+  </style>
+</head>
+<body class="bg-[#faf9f6] text-[#2b2b2b] leading-relaxed">
+  <header class="bg-[#121212] text-white fixed w-full z-30">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 no-underline">
+        <span class="text-2xl font-semibold tracking-tight text-[#c5a059]" data-info="nom_marque">ErgoGalop</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="pt-28 max-w-3xl mx-auto px-4 py-14">
+    <h1 class="text-3xl font-extrabold text-[#1a365d] mb-6">Réserver un bilan / Pré-diagnostic</h1>
+
+    <form id="form-prediagnostic" class="space-y-6">
+      <!-- Le formulaire sera injecté dynamiquement depuis src/data/formulaires.json -->
+    </form>
+  </main>
+
+  <footer class="bg-[#121212] text-slate-200 mt-12">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-center">© <span data-info="nom_marque">ErgoGalop</span></div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>

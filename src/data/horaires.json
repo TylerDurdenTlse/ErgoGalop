@@ -1,0 +1,13 @@
+{
+  "duree_creneau_minutes": 90,
+  "tampon_entre_rdv_minutes": 60,
+  "planning_hebdo": {
+    "lundi": { "actif": false, "ouverture": null, "fermeture": null },
+    "mardi": { "actif": false, "ouverture": null, "fermeture": null },
+    "mercredi": { "actif": true, "ouverture": "14:00", "fermeture": "19:00" },
+    "jeudi": { "actif": true, "ouverture": "09:00", "fermeture": "19:00" },
+    "vendredi": { "actif": true, "ouverture": "09:00", "fermeture": "19:00" },
+    "samedi": { "actif": true, "ouverture": "09:00", "fermeture": "19:00" },
+    "dimanche": { "actif": true, "ouverture": "09:00", "fermeture": "19:00" }
+  }
+}

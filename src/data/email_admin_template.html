@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <style>
+    :root{--brand:#c5a059;--hero:#1a365d;--muted:#64748b}
+    body{font-family:Inter,Segoe UI,Arial,sans-serif;color:#0f172a;background:#f8fafc;padding:20px}
+    .card{max-width:680px;margin:0 auto;background:#fff;border-radius:12px;padding:20px;border:1px solid #e6e9ef}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:44px;height:44px;border-radius:8px;background:var(--brand);display:inline-block}
+    h1{color:var(--hero);font-size:20px;margin:8px 0}
+    .meta{color:var(--muted);font-size:13px}
+    .field{margin:10px 0}
+    .notes{background:#f1f5f9;padding:10px;border-radius:8px;color:#0f172a}
+    .footer{font-size:13px;color:var(--muted);margin-top:16px}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <div>
+        <div style="font-weight:700;color:var(--hero)">{{entreprise_nom}}</div>
+        <div class="meta">Nouvelle réservation — ID: {{id}}</div>
+      </div>
+    </div>
+
+    <h1>Nouvelle réservation reçue</h1>
+    <div class="meta">Reçue le {{created_at}}</div>
+
+    <div class="field"><strong>Client</strong>: {{nom}} {{prenom}}</div>
+    <div class="field"><strong>Email</strong>: {{email}} &nbsp; <strong>Téléphone</strong>: {{telephone}}</div>
+    <div class="field"><strong>Cheval</strong>: {{cheval_nom}}</div>
+    <div class="field"><strong>Prestation</strong>: {{prestation_label}} ({{prestation_souhaitee}})</div>
+    <div class="field"><strong>Lieu</strong>: {{lieu}}</div>
+    <div class="field"><strong>Date & créneau</strong>: {{date}} — {{time_range}}</div>
+
+    <h3>Détails fournis</h3>
+    <div class="notes">{{notes_html}}</div>
+
+    <div class="footer">Consultez le fichier de stockage <code>server/data/reservations.json</code> pour gérer cette réservation.</div>
+  </div>
+</body>
+</html>

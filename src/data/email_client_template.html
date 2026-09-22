@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <style>
+    :root{--brand:#c5a059;--hero:#1a365d;--muted:#64748b}
+    body{font-family:Inter,Segoe UI,Arial,sans-serif;color:#0f172a;background:#f8fafc;padding:20px}
+    .card{max-width:680px;margin:0 auto;background:#fff;border-radius:12px;padding:20px;border:1px solid #e6e9ef}
+    .logo{width:44px;height:44px;border-radius:8px;background:var(--brand);display:inline-block}
+    h1{color:var(--hero);font-size:20px;margin:8px 0}
+    .meta{color:var(--muted);font-size:13px}
+    .field{margin:10px 0}
+    .cta{display:inline-block;background:var(--brand);color:#121212;padding:10px 14px;border-radius:8px;text-decoration:none}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div class="logo" aria-hidden="true"></div>
+      <div>
+        <div style="font-weight:700;color:var(--hero)">{{entreprise_nom}}</div>
+        <div class="meta">Confirmation de réservation — ID: {{id}}</div>
+      </div>
+    </div>
+
+    <h1>Bonjour {{prenom}},</h1>
+    <p>Nous avons bien reçu votre demande de réservation. Voici le récapitulatif :</p>
+    <div class="field"><strong>Prestation :</strong> {{prestation_label}}</div>
+    <div class="field"><strong>Date :</strong> {{date}}</div>
+    <div class="field"><strong>Créneau :</strong> {{time_range}}</div>
+    <div class="field"><strong>Cheval :</strong> {{cheval_nom}}</div>
+
+    <p class="meta">Nous vous contacterons prochainement pour confirmer la venue et les modalités.</p>
+    <a class="cta" href="mailto:{{admin_email}}?subject=Confirmation%20reservation%20{{id}}">Contacter ErgoGalop</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+	"devise": "€",
+	"formations": [
+		{
+			"id": "initiation-ergonomie",
+			"titre": "Initiation à l'ergonomie équine",
+			"description": "Atelier d'une journée pour cavaliers souhaitant comprendre les bases anatomiques et adapter le matériel.",
+			"duree_jours": 1,
+			"prix": 120,
+			"lieu": "Lafitte-Vigordane ou votre structure (sur devis)",
+			"sessions": [
+				{ "date": "2026-09-18", "places": 12 },
+				{ "date": "2026-10-16", "places": 12 }
+			]
+		},
+		{
+			"id": "saddle-fitter-pro",
+			"titre": "Formation Pro : Saddle Fitting avancé",
+			"description": "Formation certifiante destinée aux professionnels (sellers, ostéopathes, instructeurs) sur 3 jours.",
+			"duree_jours": 3,
+			"prix": 720,
+			"lieu": "Centre de formation ErgoGalop — Occitanie",
+			"sessions": [
+				{ "date": "2026-11-02", "places": 8 }
+			]
+		}
+	]
+}

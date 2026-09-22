@@ -1,0 +1,31 @@
+{
+  "nom_marque": "ErgoGalop",
+  "sasu": "CG Ergonomie Équine",
+  "fondatrice": "Christelle Garcia",
+  "siren": "000 000 000",
+  "siege_social": {
+    "adresse": "Lafitte-Vigordane",
+    "code_postal": "31390",
+    "departement": "Haute-Garonne",
+    "region": "Occitanie"
+  },
+  "contact": {
+    "telephone": "06 00 00 00 00",
+    "email": "ergogalop@gmail.com",
+    "site_web": "https://www.ergogalop.fr"
+  },
+  "zone_intervention": {
+    "centre": "Lafitte-Vigordane (31390)",
+    "frais_zone1": "Gratuit",
+    "frais_zone2": 20.0,
+    "frais_zone3": 40.00,
+    "frais_hors_zone": "Sur devis",
+    "zones_principales": ["Toulouse Métropole", "Volvestre", "Commringes", "Ariège (09)", "Gers (32)"]
+  }
+  ,
+  "google": {
+    "client_id": "YOUR_GOOGLE_OAUTH_CLIENT_ID.apps.googleusercontent.com",
+    "api_key": "YOUR_GOOGLE_API_KEY",
+    "calendar_id": "primary"
+  }
+}

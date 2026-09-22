@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "ergogalop",
+  "private_key_id": "26ec8cbafbae0f035236f1b79b01fad98d78a9b4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC92TonR1FbchdL\nE9nyThG8DV+fHjVvm1FfuFIlPmKq7wDtttMgvezhUgkNiNPWED0QoZW/zXfrLvus\ny6SXEQU0Ffo7oVYQgR4+uT0G+4NFmlzWrASm+hiQQng8CeSS3HGRQA8uR0KX2bgy\nWEPiDVun1UjDAnPaf5SXdN4DSxNxI1zDOMmTpEDLaGzt8h5fXGh4K+4NWJ64q7rG\nyEaMWDAH5jLhveflgG+FUdCMpq6ouYvBMdvGxLE0fYmfEu4maevqnZerDlhA21D5\nI3kfybdk3p5kMrU7cR7xGZo62jmUNn5Z/boWleZDUat/JCr5GvieirfIcUzcJHoq\nzwsm05XjAgMBAAECggEAP8DK/pW8hHDz0YqBDhWZbwUur0h9uVT3JqXHMCqbB7vr\nG+jhTYV6HtBlqd3hBWm+l+8rUpW1R40nhwd75h8ZGDypI40yUaiKd5XNIKMlmiIU\nOyLZDRm/VfJ8Xe0UjRzqJlTUxD255zR93qo1YZwKw3mkTZhtP1rIk3Pzejej98HL\nfgAwLkaHrgO2uCJ1lsG41aylgKGPqorH1+VAzDl5ngftu8I3hdJeJOT1k8C2xmZx\nqIrfvTY19QBzwCDLUgyvg0VJJRvV6n80a5doDJfR0aXvEx1H160IKvJ+H3NMmmNG\nwF+IDY9xPH/qrQX6+6yTuoiDvdXxaxzCGWDz/FPuAQKBgQDzqx/ZGoqfsUbZKeGW\n3y7Tm6VRBcL9QMk1viSsZ2vyUaJwRIkmp0snJf1IRPs8mO6W91bQMvkCeTlGywww\nYCYkfrgw1MdCYM4iWPVccB4Bv5uSBdqXRkNEf8Eebf6+77Q/+GizDl1NB8gPBE0Z\noLG/FBk/R1DAlUFiion4PLlhIQKBgQDHdNUfNKAHCi3OQQbI59oFX9vRFIfDA6DL\nKur4BYlA4bRQwyyHFPY8p+DtPRTBupW6FM6SglMjA/Z04tzTVKRao2U19Eb1C6K8\nyM0yghMFeLDBErswO3k7OOwPReh1vMxNyUSHNJ18hm9g9XtQO5GGgmQXL5bs250N\ngSc7tICigwKBgQClEb9Qhw9z4Vd6lEmzuFvzlFRoz/tpLzNfygD0HlfdX3oojfVP\njzN1QOIVzE1ansu6z7Iq9u0DxPWNRM5sEyajwIis4+hcylG6qQMG7RkW3CPax0Zv\nBnVZeSZto9xYovA8Cd97tXZ1UZkwuxw0CU2AgXAdEwXcgQA7bljLJu/6oQKBgFpa\nWpEgTb3ipo1gd6pbHTCCFBnKqxV0d0qRzo88Msjpdb2ALJOks0cW5ZWSrex0kY8S\nDeHgl7is+uBIRLCXDzzf9+FRHzOyaa4LaKkQs30vByLvUUywJGLnjkf86ykqtYIn\nQpvdAdp/K8VIbuwRkALW3nCCZmQ1uBd+Aj/RrNPxAoGAca8M0exhgKzl4PNnEnKo\n+pjK+HBzmho8pdKS3vEjJmDM3AyCZeepo9bwZcf9Xu6J2dcjGeoCFQIcKkrjgq6L\nlUMIXkQMI+MB1xhvk1WSdj6krG8WdW6Ts8ovwxjedrJgUfuBmzf3sZsiVk1T+Nb/\ngX+TBPm/UEDIEKA/8YM/Ihw=\n-----END PRIVATE KEY-----\n",
+  "client_email": "ergogalopcalendar@ergogalop.iam.gserviceaccount.com",
+  "client_id": "115511306866934004144",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ergogalopcalendar%40ergogalop.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

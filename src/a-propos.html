@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ErgoGalop — À propos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="color-scheme" content="light dark">
+</head>
+<body class="bg-[#faf9f6] text-[#2b2b2b] leading-relaxed">
+  <header class="bg-[#121212] text-white fixed w-full z-30">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 no-underline">
+        <span class="text-2xl font-semibold tracking-tight text-[#c5a059]" data-info="nom_marque">ErgoGalop</span>
+      </a>
+
+      <nav class="hidden md:flex gap-6 items-center text-sm">
+        <a class="text-slate-200 hover:text-white" href="/">Accueil</a>
+        <a class="text-slate-200 hover:text-white" href="prestations.html">Prestations</a>
+        <a class="text-slate-200 hover:text-white" href="formations.html">Formations</a>
+        <a class="text-slate-200 hover:text-white" href="a-propos.html">À propos</a>
+        <a class="bg-[#c5a059] text-[#121212] px-3 py-2 rounded-md font-medium" href="reservation.html">Réserver</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-28 max-w-4xl mx-auto px-4 py-14">
+    <h1 class="text-3xl md:text-4xl font-extrabold text-[#1a365d] mb-6">À propos</h1>
+
+    <section class="bg-white rounded-xl shadow-md p-6">
+      <h2 class="text-xl font-bold text-[#1a365d] mb-3">L'approche</h2>
+      <p id="a-propos-court" class="text-slate-700"><!-- Rempli depuis contenu-site.json --></p>
+    </section>
+
+    <section class="mt-8 bg-white rounded-xl shadow-md p-6">
+      <h2 class="text-xl font-bold text-[#1a365d] mb-3">Christelle Garcia</h2>
+      <p class="text-slate-700">Fondatrice d'ErgoGalop — expertises, certifications et parcours professionnel.</p>
+    </section>
+  </main>
+
+  <footer class="bg-[#121212] text-slate-200 mt-12">
+    <div class="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <h4 class="text-[#c5a059] font-semibold">ErgoGalop</h4>
+        <p id="footer-ancrage" class="text-sm mt-2">SASU CG Ergonomie Équine — Lafitte-Vigordane (31390)</p>
+      </div>
+      <div>
+        <h5 class="font-semibold">Contact</h5>
+        <p class="text-sm mt-2"><a data-info="telephone" class="hover:underline"></a></p>
+        <p class="text-sm"><a data-info="email" class="hover:underline"></a></p>
+      </div>
+      <div>
+        <h5 class="font-semibold">Mentions</h5>
+        <p class="text-sm mt-2">SIREN: <span id="siren">—</span></p>
+      </div>
+    </div>
+    <div class="border-t border-slate-800/40 text-center text-xs py-3">© <span data-info="nom_marque">ErgoGalop</span> — Tous droits réservés</div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "page_accueil": {
+    "hero": {
+      "titre": "Optimisez le confort et la locomotion de votre cheval",
+      "sous_titre": "Expertise en ergonomie équine et matériel anatomique au départ de Lafitte-Vigordane (Occitanie).",
+      "cta_reservation": "Réserver un bilan",
+      "cta_prestations": "Découvrir nos services"
+    },
+    "a_propos_court": {
+      "titre": "L'approche ErgoGalop",
+      "texte": "Fondée par Christelle Garcia, ErgoGalop apporte une réponse scientifique et éthique aux contraintes anatomiques de l'équitation. L'ajustement du matériel (saddle & bit fitting) vise la libération des mouvements et la prévention des douleurs."
+    }
+  }
+}

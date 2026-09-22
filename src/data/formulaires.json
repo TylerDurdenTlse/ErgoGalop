@@ -1,0 +1,63 @@
+{
+  "formulaire_prediagnostic": {
+    "titre": "Questionnaire de Pré-Diagnostic Équin",
+    "description": "Merci de remplir ces informations pour préparer la venue de Christelle Garcia à votre écurie.",
+    "etapes": [
+      {
+        "id": "etape_1",
+        "titre": "Vos coordonnées & Localisation",
+        "champs": [
+          { "id": "nom", "label": "Nom", "type": "text", "requis": true },
+          { "id": "prenom", "label": "Prénom", "type": "text", "requis": true },
+          { "id": "email", "label": "Adresse E-mail", "type": "email", "requis": true },
+          { "id": "telephone", "label": "Téléphone", "type": "tel", "requis": true },
+          { "id": "adresse_ecurie", "label": "Adresse de l'écurie / Lieu de visite", "type": "text", "requis": true, "aide": "Necessaire pour calculer la tournée depuis Lafitte-Vigordane (31390)" }
+        ]
+      },
+      {
+        "id": "etape_2",
+        "titre": "Fiche du Cheval",
+        "champs": [
+          { "id": "cheval_nom", "label": "Nom du cheval", "type": "text", "requis": true },
+          { "id": "cheval_race", "label": "Race / Type", "type": "text", "requis": true },
+          { "id": "cheval_age", "label": "Âge", "type": "number", "requis": true },
+          { 
+            "id": "cheval_discipline", 
+            "label": "Discipline principale", 
+            "type": "select", 
+            "requis": true,
+            "options": ["CSO", "Dressage", "CCE", "Loisir / Randonnée", "Trec", "Western", "Autre"]
+          },
+          { 
+            "id": "cheval_frequence_travail", 
+            "label": "Fréquence de travail par semaine", 
+            "type": "select", 
+            "requis": false,
+            "options": ["1 à 2 fois", "3 à 4 fois", "5 fois et +"]
+          }
+        ]
+      },
+      {
+        "id": "etape_3",
+        "titre": "Matériel Actuel & Motif du Bilan",
+        "champs": [
+          { 
+            "id": "prestation_souhaitee", 
+            "label": "Prestation concernée", 
+            "type": "select", 
+            "requis": true,
+            "options": ["Saddle Fitting (Selle)", "Bridle & Bit Fitting (Filet/Mors)", "Boot Fitting (Hipposandales)", "Bilan Complet"]
+          },
+          { "id": "materiel_actuel", "label": "Marque et modèle du matériel actuel", "type": "text", "requis": false, "placeholder": "Ex: Selle Thorowgood T8 Dressage 17.5\"" },
+          { 
+            "id": "symptomes_observes", 
+            "label": "Tensions ou gênes observées chez le cheval", 
+            "type": "textarea", 
+            "requis": true, 
+            "placeholder": "Ex: Défense au sanglage, rigidité à droite, perte de poil au garrot, morsures à la mise du filet..." 
+          }
+        ]
+      }
+    ]
+  }
+}

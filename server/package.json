@@ -1,0 +1,16 @@
+{
+  "name": "ergogalop-server",
+  "version": "0.1.0",
+  "description": "Small proxy for Google Calendar freebusy for ErgoGalop",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "googleapis": "^124.0.0",
+    "nodemailer": "^6.9.3",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2"
+  }
+}

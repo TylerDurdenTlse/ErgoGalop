@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>ErgoGalop — Accueil</title>
+	<!-- Tailwind via CDN (production-safe subset) -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<meta name="color-scheme" content="light dark">
+</head>
+<body class="bg-[#faf9f6] text-[#2b2b2b] leading-relaxed">
+	<!-- Header -->
+	<header class="bg-[#121212] text-white fixed w-full z-30">
+		<div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+			<a href="/" class="flex items-center gap-3 no-underline">
+				<svg width="42" height="42" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+					<rect width="24" height="24" rx="4" fill="#c5a059"></rect>
+					<path d="M6 15c2-4 6-6 9-6" stroke="#121212" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+				<span class="text-2xl font-semibold tracking-tight text-[#c5a059]" data-info="nom_marque">ErgoGalop</span>
+			</a>
+
+			<nav class="hidden md:flex gap-6 items-center text-sm">
+				<a class="text-slate-200 hover:text-white" href="/">Accueil</a>
+				<a class="text-slate-200 hover:text-white" href="prestations.html">Prestations</a>
+				<a class="text-slate-200 hover:text-white" href="formations.html">Formations</a>
+				<a class="text-slate-200 hover:text-white" href="a-propos.html">À propos</a>
+				<a class="bg-[#c5a059] text-[#121212] px-3 py-2 rounded-md font-medium" href="reservation.html">Réserver</a>
+			</nav>
+
+			<div class="md:hidden">
+				<button aria-label="Ouvrir le menu" class="text-slate-200">☰</button>
+			</div>
+		</div>
+	</header>
+
+	<main class="pt-28">
+		<!-- Hero -->
+		<section class="max-w-6xl mx-auto px-4 py-14">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+				<div>
+					<h1 id="hero-titre" class="text-3xl md:text-4xl font-extrabold text-[#1a365d] leading-tight">Optimisez le confort et la locomotion de votre cheval</h1>
+					<p id="hero-sous-titre" class="mt-4 text-lg text-slate-700">Expertise en ergonomie équine et matériel anatomique au départ de Lafitte-Vigordane (Occitanie).</p>
+
+					<div class="mt-8 flex gap-3">
+						<a id="cta-reserver" class="inline-block bg-[#2b6cb0] hover:bg-blue-800 text-white font-semibold px-5 py-3 rounded-lg" href="reservation.html">Réserver un bilan</a>
+						<a id="cta-prestations" class="inline-block border border-[#2b6cb0] text-[#2b6cb0] px-5 py-3 rounded-lg" href="prestations.html">Découvrir nos services</a>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-2xl shadow-lg p-6">
+					<h3 class="text-xl font-bold text-[#1a365d] mb-3">L'approche ErgoGalop</h3>
+					<p id="a-propos-court" class="text-slate-700">Fondée par Christelle Garcia, ErgoGalop apporte une réponse scientifique et éthique aux contraintes anatomiques de l'équitation.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Prestations: grille 3 cartes -->
+		<section class="max-w-6xl mx-auto px-4 py-8">
+			<h2 class="text-2xl font-bold text-[#1a365d] mb-6">Nos prestations</h2>
+			<div id="grid-prestations" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"> 
+				<!-- Cartes injectées dynamiquement depuis src/data/prestations.json -->
+			</div>
+		</section>
+	</main>
+
+	<!-- Footer -->
+	<footer class="bg-[#121212] text-slate-200 mt-12">
+		<div class="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+			<div>
+				<h4 class="text-[#c5a059] font-semibold">ErgoGalop</h4>
+				<p id="footer-ancrage" class="text-sm mt-2">SASU CG Ergonomie Équine — Lafitte-Vigordane (31390)</p>
+			</div>
+			<div>
+				<h5 class="font-semibold">Contact</h5>
+				<p class="text-sm mt-2"><a data-info="telephone" class="hover:underline"></a></p>
+				<p class="text-sm"><a data-info="email" class="hover:underline"></a></p>
+			</div>
+			<div>
+				<h5 class="font-semibold">Mentions</h5>
+				<p class="text-sm mt-2">SIREN: <span id="siren">—</span></p>
+			</div>
+		</div>
+		<div class="border-t border-slate-800/40 text-center text-xs py-3">© <span data-info="nom_marque">ErgoGalop</span> — Tous droits réservés</div>
+	</footer>
+
+	<script src="./app.js"></script>
+
+	<script>
+	// Chargement et injection du contenu textuel (Hero + A-propos) depuis contenu-site.json
+	async function chargerContenuAccueil() {
+		try {
+			const res = await fetch('./data/contenu-site.json');
+			if (!res.ok) return;
+			const json = await res.json();
+			const hero = json.page_accueil?.hero;
+			const apropos = json.page_accueil?.a_propos_court;
+			if (hero) {
+				document.getElementById('hero-titre').textContent = hero.titre || document.getElementById('hero-titre').textContent;
+				document.getElementById('hero-sous-titre').textContent = hero.sous_titre || '';
+				document.getElementById('cta-reserver').textContent = hero.cta_reservation || 'Réserver';
+				document.getElementById('cta-prestations').textContent = hero.cta_prestations || 'Prestations';
+			}
+			if (apropos) {
+				document.getElementById('a-propos-court').textContent = apropos.texte || '';
+			}
+		} catch (e) { console.error(e); }
+	}
+
+	// Rend la grille des 3 premières prestations depuis prestations.json
+	async function chargerPrestationsGrille() {
+		try {
+			const res = await fetch('./data/prestations.json');
+			if (!res.ok) throw new Error('Impossible de charger prestations.json');
+			const services = await res.json();
+			const conteneur = document.getElementById('grid-prestations');
+			conteneur.innerHTML = '';
+
+			// Prendre les 3 premières prestations (respecter l'ordre du fichier)
+			services.slice(0,3).forEach(s => {
+				const card = document.createElement('article');
+				card.className = 'bg-white rounded-xl shadow-md p-6 border border-slate-100 flex flex-col justify-between';
+
+				card.innerHTML = `
+					<div>
+						<h3 class="text-xl font-bold text-[#1a365d] mb-2">${s.titre}</h3>
+						<p class="text-sm text-slate-600 mb-4">${s.description}</p>
+						<ul class="text-sm text-slate-700 space-y-2 mb-6">
+							${ (s.etapes || []).slice(0,3).map(e => `<li class="flex items-start gap-2">➤ ${e}</li>`).join('') }
+						</ul>
+					</div>
+					<div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+						<div>
+							<span class="text-lg font-bold text-[#1a365d]">${s.prix_eure_ttc ? s.prix_eure_ttc.toFixed(2) + ' €' : ''}</span>
+						</div>
+						<a href="reservation.html?service=${encodeURIComponent(s.id)}" class="bg-[#c5a059] hover:brightness-95 text-[#121212] font-medium px-4 py-2 rounded-lg text-sm">Réserver</a>
+					</div>
+				`;
+
+				conteneur.appendChild(card);
+			});
+		} catch (err) {
+			console.error(err);
+		}
+	}
+
+	document.addEventListener('DOMContentLoaded', () => {
+		chargerContenuAccueil();
+		chargerPrestationsGrille();
+		// app.js will also run and populate entreprise/contact info
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "smtp": {
+    "host": "smtp.example.com",
+    "port": 587,
+    "secure": false,
+    "auth": {
+      "user": "smtp-user@example.com",
+      "pass": "SMTP_PASSWORD"
+    }
+  },
+  "from": "ErgoGalop <noreply@ergogalop.fr>",
+  "admin_email": "ergogalop@gmail.com"
+}
